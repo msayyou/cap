@@ -800,7 +800,7 @@ def main():
         st.dataframe(
             bm_display.style
                 .format({"Cap Rate Mid": "{:.2%}", "RevPAR Réf. (€)": "€ {:.0f}"})
-                .applymap(color_tendance, subset=["Tendance"]),
+                .map(color_tendance, subset=["Tendance"]),
             use_container_width=True, hide_index=True
         )
 
